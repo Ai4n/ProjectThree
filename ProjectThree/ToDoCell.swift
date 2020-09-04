@@ -13,4 +13,10 @@ class ToDoCell: UITableViewCell {
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var imageRight: UIImageView!
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        backgroundColor = nil
+        imageRight.image = UIImage(named: "circle")
+    }
+    
 }
