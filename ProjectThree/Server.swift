@@ -9,10 +9,12 @@
 import Foundation
 
 class Server {
-    func getMovies(completion: ([Movie]) -> Void) {
+    static func getMovies(completion: @escaping ([Movie]) -> Void) {
         let data = dataFromInternet.data(using: .utf8)!
         let movies = try! JSONDecoder().decode([Movie].self, from: data)
-        completion(movies)
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2){
+            completion(movies)
+        }
     }
 }
 private let dataFromInternet = """

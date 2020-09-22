@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220552FB251A281A0010FE03 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220552FA251A281A0010FE03 /* MovieCell.swift */; };
 		221840D924FE5C1A005F194C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221840D824FE5C1A005F194C /* AppDelegate.swift */; };
 		221840DB24FE5C1A005F194C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221840DA24FE5C1A005F194C /* SceneDelegate.swift */; };
 		221840DD24FE5C1A005F194C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221840DC24FE5C1A005F194C /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		220552FA251A281A0010FE03 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		221840D524FE5C1A005F194C /* ProjectThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		221840D824FE5C1A005F194C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		221840DA24FE5C1A005F194C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		220552F9251A27750010FE03 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				220552FA251A281A0010FE03 /* MovieCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		221840CC24FE5C1A005F194C = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		221840D724FE5C1A005F194C /* ProjectThree */ = {
 			isa = PBXGroup;
 			children = (
+				220552F9251A27750010FE03 /* Views */,
 				223184C025138BE3008AD08E /* Models */,
 				221840D824FE5C1A005F194C /* AppDelegate.swift */,
 				221840DA24FE5C1A005F194C /* SceneDelegate.swift */,
@@ -155,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				220552FB251A281A0010FE03 /* MovieCell.swift in Sources */,
 				223184BF2513886F008AD08E /* Server.swift in Sources */,
 				221840DD24FE5C1A005F194C /* ViewController.swift in Sources */,
 				223184C425138C55008AD08E /* Movie.swift in Sources */,

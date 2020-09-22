@@ -12,12 +12,19 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var movies = [Movie]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        Server.getMovies { newMovies in
+            DispatchQueue.main.async {
+                self.movies = newMovies
+                self.tableView.reloadData()
+            }
+        }        
     }
 
 
@@ -25,16 +32,19 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        fatalError()
+        let movie = movies[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! MovieCell
+        cell.configure(with: movie)
+        return cell
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        fatalError()
+        movies.count
     }
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        1
     }
     
 }
